@@ -1,6 +1,13 @@
 import React from 'react';
+import moment from 'moment';
 
 function EmployeeList(props){
+    
+    function formatDate(date) {
+       var fomatdate = moment(date).format("YYYY-MM-DD");
+       return fomatdate;
+    }
+
 return(
 <tr >
     <td>
@@ -19,7 +26,7 @@ return(
     </td>
 
     <td>
-        {props.DOB}
+        {formatDate(props.DOB)}
     </td>
 </tr>
 
